@@ -1,0 +1,18 @@
+{
+    "name": "my-project",
+    "version": "1.0.0",
+    "private": true,
+    "workspaces": [
+      "frontend",
+      "backend"
+    ],
+    "scripts": {
+      "start": "concurrently \"npm run start --workspace backend\" \"npm run start --workspace frontend\"",
+      "build": "npm run build --workspace frontend",
+      "test": "npm test --workspace frontend"
+    },
+    "devDependencies": {
+      "concurrently": "^6.0.0"
+    }
+  }
+  
